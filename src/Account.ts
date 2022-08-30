@@ -1,11 +1,10 @@
 export class Account {
 
+    private value: number;
+
     constructor(number: number) {
         this.value=number;
     }
-
-    private value: number;
-
 
     getValue():number {
         return this.value;

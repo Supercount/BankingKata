@@ -1,6 +1,6 @@
 import {Transaction} from "./Transaction";
 
-export class Deposit implements Transaction{
+export class Withdraw implements Transaction{
 
     date: Date;
     value: number;
