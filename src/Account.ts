@@ -2,7 +2,7 @@ export class Account {
 
     private value: number;
 
-    constructor(number: number) {
+    constructor(number: number = 0) {
         this.value=number;
     }
 
@@ -22,5 +22,9 @@ export class Account {
             throw new RangeError("Withdraw must be greater than zero.")
         }
         this.value -= value;
+    }
+
+    printStatement():string {
+        return "Date Amount Balance";
     }
 }

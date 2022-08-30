@@ -3,7 +3,7 @@ import {Account} from "../src/Account";
 describe( 'unit test', () => {
 
     it('deposit should add value to current account', function () {
-        let account = new Account(0);
+        let account = new Account();
         let value = 5;
 
         account.deposit(value)
@@ -13,7 +13,7 @@ describe( 'unit test', () => {
     });
 
     it('deposit should not allow negative value.', function () {
-        let account = new Account(0);
+        let account = new Account();
         let value = -5;
 
         expect(() => account.deposit(value)).toThrow("Deposit must be greater than zero.");
@@ -36,8 +36,10 @@ describe( 'unit test', () => {
         expect(() => account.withdraw(value)).toThrow("Withdraw must be greater than zero.");
     });
 
-    it('should return ', function () {
-        
+    it('should return header for an account with no transactions', function () {
+        let account = new Account();
+
+        expect(account.printStatement()).toEqual("Date Amount Balance");
     });
 
 });
