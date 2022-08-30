@@ -2,11 +2,13 @@ import {Account} from "../src/Account";
 
 describe( 'unit test', () => {
 
-    it('should return empty statement when there is no transactions', function () {
-        let account = new Account();
+    it('deposit should add value to current account', function () {
+        let account = new Account(0);
 
-        expect(account.printStatement()).toEqual("Date Amount Balance");
+        let value = 5;
+        account.deposit(value)
+        const actual = account.getValue();
+
+        expect(actual).toEqual(5);
     });
-
-
 });

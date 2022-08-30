@@ -1,6 +1,17 @@
 export class Account {
 
-    printStatement() {
-        return undefined;
+    constructor(number: number) {
+        this.value=number;
+    }
+
+    private value: number;
+
+
+    getValue():number {
+        return this.value;
+    }
+
+    deposit(value: number):void {
+        this.value +=value;
     }
 }
