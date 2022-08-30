@@ -1,4 +1,5 @@
 import {Account} from "../src/Account";
+import * as Assert from "assert";
 
 describe( 'unit test', () => {
 
@@ -10,5 +11,12 @@ describe( 'unit test', () => {
         const actual = account.getValue();
 
         expect(actual).toEqual(5);
+    });
+
+    it('deposit should not allow negative value.', function () {
+        let account = new Account(0);
+
+        let value = -5;
+        expect(() => account.deposit(value)).toThrow("Deposit must be greater than zero.");
     });
 });

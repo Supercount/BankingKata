@@ -12,6 +12,9 @@ export class Account {
     }
 
     deposit(value: number):void {
+        if(value <= 0) {
+            throw new RangeError("Deposit must be greater than zero.")
+        }
         this.value +=value;
     }
 }
