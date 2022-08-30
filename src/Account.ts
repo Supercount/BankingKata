@@ -1,3 +1,5 @@
+import {Deposit} from "./Deposit";
+
 export class Account {
 
     constructor(number: number) {

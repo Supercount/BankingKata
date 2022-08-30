@@ -1,5 +1,4 @@
 import {Account} from "../src/Account";
-import * as Assert from "assert";
 
 describe( 'unit test', () => {
 
