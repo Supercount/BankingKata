@@ -19,6 +19,9 @@ export class Account {
     }
 
     withdraw(value: number):void{
+        if(value <= 0) {
+            throw new RangeError("Withdraw must be greater than zero.")
+        }
         this.value -= value;
     }
 }

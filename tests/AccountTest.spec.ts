@@ -28,4 +28,12 @@ describe( 'unit test', () => {
 
         expect(actual).toEqual(5);
     });
+
+    it('withdraw should not allow negative value.', function () {
+        let account = new Account(10);
+        let value = -5;
+
+        expect(() => account.withdraw(value)).toThrow("Withdraw must be greater than zero.");
+    });
+
 });
