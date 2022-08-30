@@ -1,5 +1,3 @@
-import {Deposit} from "./Deposit";
-
 export class Account {
 
     constructor(number: number) {
@@ -17,6 +15,10 @@ export class Account {
         if(value <= 0) {
             throw new RangeError("Deposit must be greater than zero.")
         }
-        this.value +=value;
+        this.value += value;
+    }
+
+    withdraw(value: number):void{
+        this.value -= value;
     }
 }

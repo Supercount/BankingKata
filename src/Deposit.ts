@@ -17,5 +17,4 @@ export class Deposit implements Transaction{
     printDate():string {
         return this.date.toString()
     }
-
 }
